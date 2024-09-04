@@ -1,0 +1,3 @@
+/home/ymsyaraf/projects/NanoDir/build/CMakeFiles/NanoDir.dir
+/home/ymsyaraf/projects/NanoDir/build/CMakeFiles/edit_cache.dir
+/home/ymsyaraf/projects/NanoDir/build/CMakeFiles/rebuild_cache.dir

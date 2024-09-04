@@ -1,0 +1,41 @@
+#include "NanoDir.h"
+#include "UI.h"
+#include "FileOperations.h"
+#include "InputHandler.h"
+
+NanoDir::NanoDir() : currentPath(fs::current_path()), selectedIndex(0), commandBuffer(""), backgroundColor(TB_BLUE), textColor(TB_WHITE), currentMode(MODE_NAVIGATION) {
+    if (tb_init() != 0) {
+        std::cerr << "Failed to initialize Termbox" << std::endl;
+        exit(1);
+    }
+    tb_select_input_mode(TB_INPUT_ESC | TB_INPUT_MOUSE);
+    listFiles(currentPath);
+}
+
+
+
+NanoDir::~NanoDir() {
+    tb_shutdown();
+}
+
+void NanoDir::run() {
+    while (true) {
+        tb_clear();
+        drawUI();
+        tb_present();
+
+        struct tb_event event;
+        tb_poll_event(&event);
+
+        if (event.type == TB_EVENT_KEY) {
+            if (event.key == TB_KEY_ESC) {
+                break;
+            }
+            handleKeyPress(event);
+        } else if (event.type == TB_EVENT_MOUSE) {
+            handleMouseEvent(event);
+        }
+    }
+}
+
+

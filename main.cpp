@@ -1,6 +1,7 @@
-#include <iostream>
+#include "NanoDir.h"
 
-int main(int argc, char **argv) {
-    std::cout << "Hello, world!" << std::endl;
+int main() {
+    NanoDir app;
+    app.run();
     return 0;
 }
