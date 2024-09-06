@@ -7,6 +7,7 @@
 #include <string>
 #include <filesystem>
 #include <algorithm>
+#include <unistd.h>
 
 namespace fs = std::filesystem;
 
@@ -32,6 +33,7 @@ public:
 
 private:
     std::vector<std::string> files;
+    std::vector<int> selectedFiles;
     int selectedIndex;
     fs::path currentPath;
     std::string commandBuffer;

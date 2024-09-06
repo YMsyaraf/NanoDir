@@ -1,5 +1,4 @@
 #include "NanoDir.h"
-#include "FileOperations.h"
 
 void NanoDir::listFiles(const std::filesystem::path& path) {
     files.clear();

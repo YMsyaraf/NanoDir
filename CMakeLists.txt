@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(NanoDir VERSION 1.0)
+project(NanoDir VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_BUILD_TYPE Debug)
 
 # Add the new source files
 add_executable(NanoDir main.cpp NanoDir.cpp UI.cpp FileOperations.cpp InputHandler.cpp)

@@ -1,5 +1,4 @@
 #include "NanoDir.h"
-#include "UI.h"
 
 void NanoDir::setBackgroundColor() {
     int width = tb_width();
@@ -72,8 +71,10 @@ void NanoDir::drawUI() {
     int end = std::min(start + visibleLines, static_cast<int>(files.size()));
 
     for (int i = start; i < end; ++i) {
-        if (i == selectedIndex) {
-            tb_print(1, 7 + i - start, TB_BLACK, TB_YELLOW, files[i].c_str()); // Highlight color
+        if (std::find(selectedFiles.begin(), selectedFiles.end(), i) != selectedFiles.end()) {
+            tb_print(1, 7 + i - start, TB_BLACK, TB_GREEN, files[i].c_str()); // Highlight selected files
+        } else if (i == selectedIndex) {
+            tb_print(1, 7 + i - start, TB_BLACK, TB_YELLOW, files[i].c_str()); // Highlight current selection
         } else {
             tb_print(1, 7 + i - start, textColor, backgroundColor, files[i].c_str());
         }

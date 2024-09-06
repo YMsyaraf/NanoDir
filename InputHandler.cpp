@@ -1,11 +1,13 @@
 #include "NanoDir.h"
-#include "InputHandler.h"
 
 void NanoDir::executeCommand(const std::string& command) {
-    if (command == "exit") {
+    std::istringstream iss(command);
+    std::string cmd, dest;
+    iss >> cmd >> dest;
+    if (cmd == "exit") {
         tb_shutdown();
         exit(0);
-    } else if (command.rfind("color ", 0) == 0) {
+    } else if (cmd.rfind("color ", 0) == 0) {
         std::istringstream iss(command);
         std::string cmd, bg, text;
         iss >> cmd >> bg >> text;
@@ -27,8 +29,33 @@ void NanoDir::executeCommand(const std::string& command) {
         else if (text == "black") textColor = COLOR_BLACK;
 
         changeColor(bgColor, textColor);
-    } else {
+
+    } else if (cmd == "delete") {
+        for (int index : selectedFiles) {
+            fs::remove(currentPath / files[index]);
+        }
+        selectedFiles.clear(); // Clear selection after operation
+
+    } else if (cmd == "copy") {
+        // Set destination to current directory
+        fs::path destinationPath = dest.empty() ? currentPath : fs::path(dest);
+        for (int index : selectedFiles) {
+            fs::path source = currentPath / files[index];
+            fs::path destination = destinationPath / files[index];
+
+            // Check if the file already exists and add a number if it does
+            int count = 1;
+            while (fs::exists(destination)) {
+                destination = destinationPath / (source.stem().string() + "(" + std::to_string(count) + ")" + source.extension().string());
+                count++;
+            }
+            fs::copy(source, destination);
+        }
+        selectedFiles.clear(); // Clear selection after operation
+
+    }else {
         tb_shutdown(); // Shutdown Termbox before executing the command
+        chdir(currentPath.c_str()); // Change to the current directory
         int result = system(command.c_str());
         tb_init(); // Reinitialize Termbox after the command
         tb_select_input_mode(TB_INPUT_ESC | TB_INPUT_MOUSE);
@@ -46,7 +73,7 @@ void NanoDir::handleMouseEvent(const tb_event &event) {
             int mouseY = event.y;
             int visibleLines = tb_height() - 9;
             int start = std::max(0, selectedIndex - visibleLines / 2);
-            int end = std::min(start + visibleLines, static_cast<int>(files.size()));
+            //int end = std::min(start + visibleLines, static_cast<int>(files.size()));
 
             if (mouseY >= 7 && mouseY < 7 + visibleLines) {
                 int index = start + (mouseY - 7);
@@ -93,6 +120,16 @@ void NanoDir::handleKeyPress(const tb_event &event) {
                 listFiles(currentPath);
                 selectedIndex = 0;
                 break;
+            case TB_KEY_SPACE:// Add this case for toggling selection
+                {
+                    auto it = std::find(selectedFiles.begin(), selectedFiles.end(), selectedIndex);
+                    if (it != selectedFiles.end()) {
+                        selectedFiles.erase(it); // Deselect if already selected
+                    } else {
+                    selectedFiles.push_back(selectedIndex); // Select if not already selected
+                    }
+                }
+            break;
             default:
                 break;
         }
