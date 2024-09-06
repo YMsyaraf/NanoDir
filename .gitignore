@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ignore KDevelop project files
 *.kdev4
 *.cbp
@@ -9,7 +8,38 @@
 /bin/
 /out/
 /.kdev4/
-=======
 
-*.cbp
->>>>>>> 70d131d256e3e0972745a8c1912902d3e4164aa1
+# Ignore CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore Code::Blocks generated files
+*.depend
+*.layout.*
+*.workspace
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore executable files
+*.exe
+*.out
+*.app
+
+# Ignore temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific settings
+*.user
+*.suo
+*.userprefs
