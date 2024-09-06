@@ -15,11 +15,20 @@ set(COMMON_SOURCES
 
 # Add platform-specific source files
 if (WIN32)
-    add_executable(NanoDir src/windows/main.cpp ${COMMON_SOURCES})
+    add_executable(NanoDir src/windows/main_windows.cpp ${COMMON_SOURCES} ${SOURCE_FILES})
     find_path(TERMBOX_INCLUDE_DIR termbox.h PATHS "C:/path/to/termbox/include")
     find_library(TERMBOX_LIBRARY NAMES termbox PATHS "C:/path/to/termbox/lib")
+
+    # Specify the location of the icon file
+    set(ICON_FILE ${CMAKE_SOURCE_DIR}/assets/NanoDir.ico)
+
+    # Add a custom command to copy the icon file to the build directory
+    add_custom_command(
+        TARGET NanoDir POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy ${ICON_FILE} $<TARGET_FILE_DIR:NanoDir>
+	)
 else()
-    add_executable(NanoDir src/linux/main.cpp ${COMMON_SOURCES})
+    add_executable(NanoDir src/linux/main_linux.cpp ${COMMON_SOURCES})
     find_path(TERMBOX_INCLUDE_DIR termbox.h)
     find_library(TERMBOX_LIBRARY NAMES termbox)
 endif()

@@ -43,3 +43,4 @@ Thumbs.db
 *.user
 *.suo
 *.userprefs
+/obj
