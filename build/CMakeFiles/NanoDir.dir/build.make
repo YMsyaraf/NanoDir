@@ -69,92 +69,92 @@ include CMakeFiles/NanoDir.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NanoDir.dir/flags.make
 
-CMakeFiles/NanoDir.dir/main.cpp.o: CMakeFiles/NanoDir.dir/flags.make
-CMakeFiles/NanoDir.dir/main.cpp.o: /home/ymsyaraf/projects/NanoDir/main.cpp
-CMakeFiles/NanoDir.dir/main.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NanoDir.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/main.cpp.o -MF CMakeFiles/NanoDir.dir/main.cpp.o.d -o CMakeFiles/NanoDir.dir/main.cpp.o -c /home/ymsyaraf/projects/NanoDir/main.cpp
+CMakeFiles/NanoDir.dir/src/linux/main.cpp.o: CMakeFiles/NanoDir.dir/flags.make
+CMakeFiles/NanoDir.dir/src/linux/main.cpp.o: /home/ymsyaraf/projects/NanoDir/src/linux/main.cpp
+CMakeFiles/NanoDir.dir/src/linux/main.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NanoDir.dir/src/linux/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/src/linux/main.cpp.o -MF CMakeFiles/NanoDir.dir/src/linux/main.cpp.o.d -o CMakeFiles/NanoDir.dir/src/linux/main.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/linux/main.cpp
 
-CMakeFiles/NanoDir.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/main.cpp > CMakeFiles/NanoDir.dir/main.cpp.i
+CMakeFiles/NanoDir.dir/src/linux/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/src/linux/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/src/linux/main.cpp > CMakeFiles/NanoDir.dir/src/linux/main.cpp.i
 
-CMakeFiles/NanoDir.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/main.cpp -o CMakeFiles/NanoDir.dir/main.cpp.s
+CMakeFiles/NanoDir.dir/src/linux/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/src/linux/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/src/linux/main.cpp -o CMakeFiles/NanoDir.dir/src/linux/main.cpp.s
 
-CMakeFiles/NanoDir.dir/NanoDir.cpp.o: CMakeFiles/NanoDir.dir/flags.make
-CMakeFiles/NanoDir.dir/NanoDir.cpp.o: /home/ymsyaraf/projects/NanoDir/NanoDir.cpp
-CMakeFiles/NanoDir.dir/NanoDir.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NanoDir.dir/NanoDir.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/NanoDir.cpp.o -MF CMakeFiles/NanoDir.dir/NanoDir.cpp.o.d -o CMakeFiles/NanoDir.dir/NanoDir.cpp.o -c /home/ymsyaraf/projects/NanoDir/NanoDir.cpp
+CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o: CMakeFiles/NanoDir.dir/flags.make
+CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o: /home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp
+CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o -MF CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o.d -o CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp
 
-CMakeFiles/NanoDir.dir/NanoDir.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/NanoDir.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/NanoDir.cpp > CMakeFiles/NanoDir.dir/NanoDir.cpp.i
+CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp > CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.i
 
-CMakeFiles/NanoDir.dir/NanoDir.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/NanoDir.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/NanoDir.cpp -o CMakeFiles/NanoDir.dir/NanoDir.cpp.s
+CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp -o CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.s
 
-CMakeFiles/NanoDir.dir/UI.cpp.o: CMakeFiles/NanoDir.dir/flags.make
-CMakeFiles/NanoDir.dir/UI.cpp.o: /home/ymsyaraf/projects/NanoDir/UI.cpp
-CMakeFiles/NanoDir.dir/UI.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NanoDir.dir/UI.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/UI.cpp.o -MF CMakeFiles/NanoDir.dir/UI.cpp.o.d -o CMakeFiles/NanoDir.dir/UI.cpp.o -c /home/ymsyaraf/projects/NanoDir/UI.cpp
+CMakeFiles/NanoDir.dir/src/common/UI.cpp.o: CMakeFiles/NanoDir.dir/flags.make
+CMakeFiles/NanoDir.dir/src/common/UI.cpp.o: /home/ymsyaraf/projects/NanoDir/src/common/UI.cpp
+CMakeFiles/NanoDir.dir/src/common/UI.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/NanoDir.dir/src/common/UI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/src/common/UI.cpp.o -MF CMakeFiles/NanoDir.dir/src/common/UI.cpp.o.d -o CMakeFiles/NanoDir.dir/src/common/UI.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/UI.cpp
 
-CMakeFiles/NanoDir.dir/UI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/UI.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/UI.cpp > CMakeFiles/NanoDir.dir/UI.cpp.i
+CMakeFiles/NanoDir.dir/src/common/UI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/src/common/UI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/src/common/UI.cpp > CMakeFiles/NanoDir.dir/src/common/UI.cpp.i
 
-CMakeFiles/NanoDir.dir/UI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/UI.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/UI.cpp -o CMakeFiles/NanoDir.dir/UI.cpp.s
+CMakeFiles/NanoDir.dir/src/common/UI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/src/common/UI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/src/common/UI.cpp -o CMakeFiles/NanoDir.dir/src/common/UI.cpp.s
 
-CMakeFiles/NanoDir.dir/FileOperations.cpp.o: CMakeFiles/NanoDir.dir/flags.make
-CMakeFiles/NanoDir.dir/FileOperations.cpp.o: /home/ymsyaraf/projects/NanoDir/FileOperations.cpp
-CMakeFiles/NanoDir.dir/FileOperations.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NanoDir.dir/FileOperations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/FileOperations.cpp.o -MF CMakeFiles/NanoDir.dir/FileOperations.cpp.o.d -o CMakeFiles/NanoDir.dir/FileOperations.cpp.o -c /home/ymsyaraf/projects/NanoDir/FileOperations.cpp
+CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o: CMakeFiles/NanoDir.dir/flags.make
+CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o: /home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp
+CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o -MF CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o.d -o CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp
 
-CMakeFiles/NanoDir.dir/FileOperations.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/FileOperations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/FileOperations.cpp > CMakeFiles/NanoDir.dir/FileOperations.cpp.i
+CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp > CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.i
 
-CMakeFiles/NanoDir.dir/FileOperations.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/FileOperations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/FileOperations.cpp -o CMakeFiles/NanoDir.dir/FileOperations.cpp.s
+CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp -o CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.s
 
-CMakeFiles/NanoDir.dir/InputHandler.cpp.o: CMakeFiles/NanoDir.dir/flags.make
-CMakeFiles/NanoDir.dir/InputHandler.cpp.o: /home/ymsyaraf/projects/NanoDir/InputHandler.cpp
-CMakeFiles/NanoDir.dir/InputHandler.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NanoDir.dir/InputHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/InputHandler.cpp.o -MF CMakeFiles/NanoDir.dir/InputHandler.cpp.o.d -o CMakeFiles/NanoDir.dir/InputHandler.cpp.o -c /home/ymsyaraf/projects/NanoDir/InputHandler.cpp
+CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o: CMakeFiles/NanoDir.dir/flags.make
+CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o: /home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp
+CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o: CMakeFiles/NanoDir.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ymsyaraf/projects/NanoDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o -MF CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o.d -o CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp
 
-CMakeFiles/NanoDir.dir/InputHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/InputHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/InputHandler.cpp > CMakeFiles/NanoDir.dir/InputHandler.cpp.i
+CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp > CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.i
 
-CMakeFiles/NanoDir.dir/InputHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/InputHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/InputHandler.cpp -o CMakeFiles/NanoDir.dir/InputHandler.cpp.s
+CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp -o CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.s
 
 # Object files for target NanoDir
 NanoDir_OBJECTS = \
-"CMakeFiles/NanoDir.dir/main.cpp.o" \
-"CMakeFiles/NanoDir.dir/NanoDir.cpp.o" \
-"CMakeFiles/NanoDir.dir/UI.cpp.o" \
-"CMakeFiles/NanoDir.dir/FileOperations.cpp.o" \
-"CMakeFiles/NanoDir.dir/InputHandler.cpp.o"
+"CMakeFiles/NanoDir.dir/src/linux/main.cpp.o" \
+"CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o" \
+"CMakeFiles/NanoDir.dir/src/common/UI.cpp.o" \
+"CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o" \
+"CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o"
 
 # External object files for target NanoDir
 NanoDir_EXTERNAL_OBJECTS =
 
-NanoDir: CMakeFiles/NanoDir.dir/main.cpp.o
-NanoDir: CMakeFiles/NanoDir.dir/NanoDir.cpp.o
-NanoDir: CMakeFiles/NanoDir.dir/UI.cpp.o
-NanoDir: CMakeFiles/NanoDir.dir/FileOperations.cpp.o
-NanoDir: CMakeFiles/NanoDir.dir/InputHandler.cpp.o
+NanoDir: CMakeFiles/NanoDir.dir/src/linux/main.cpp.o
+NanoDir: CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o
+NanoDir: CMakeFiles/NanoDir.dir/src/common/UI.cpp.o
+NanoDir: CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o
+NanoDir: CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o
 NanoDir: CMakeFiles/NanoDir.dir/build.make
 NanoDir: /usr/local/lib/libtermbox.so
 NanoDir: CMakeFiles/NanoDir.dir/link.txt

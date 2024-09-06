@@ -1,13 +1,18 @@
 #ifndef NANODIR_H
 #define NANODIR_H
 
-#include <termbox.h>
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <string>
 #include <filesystem>
-#include <algorithm>
-#include <unistd.h>
+#include <termbox.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
 
 namespace fs = std::filesystem;
 
@@ -37,20 +42,20 @@ private:
     int selectedIndex;
     fs::path currentPath;
     std::string commandBuffer;
-
     uint16_t backgroundColor;
     uint16_t textColor;
     Mode currentMode;
 
-    void setBackgroundColor();
+    void listFiles(const fs::path& path);
     void drawBox(int x, int y, int width, int height, uint16_t fg, uint16_t bg);
     void drawUI();
-    void listFiles(const fs::path& path);
+    void tb_print(int x, int y, uint16_t fg, uint16_t bg, const char *str);
     void executeCommand(const std::string& command);
     void handleMouseEvent(const tb_event &event);
     void handleKeyPress(const tb_event &event);
-    void tb_print(int x, int y, uint16_t fg, uint16_t bg, const char *str);
+    void setBackgroundColor();
     void changeColor(ColorOption bg, ColorOption text);
+
 };
 
 #endif // NANODIR_H

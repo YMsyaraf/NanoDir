@@ -1,27 +1,27 @@
 [
 {
   "directory": "/home/ymsyaraf/projects/NanoDir/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/main.cpp.o -c /home/ymsyaraf/projects/NanoDir/main.cpp",
-  "file": "/home/ymsyaraf/projects/NanoDir/main.cpp"
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/src/linux/main.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/linux/main.cpp",
+  "file": "/home/ymsyaraf/projects/NanoDir/src/linux/main.cpp"
 },
 {
   "directory": "/home/ymsyaraf/projects/NanoDir/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/NanoDir.cpp.o -c /home/ymsyaraf/projects/NanoDir/NanoDir.cpp",
-  "file": "/home/ymsyaraf/projects/NanoDir/NanoDir.cpp"
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp",
+  "file": "/home/ymsyaraf/projects/NanoDir/src/common/NanoDir.cpp"
 },
 {
   "directory": "/home/ymsyaraf/projects/NanoDir/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/UI.cpp.o -c /home/ymsyaraf/projects/NanoDir/UI.cpp",
-  "file": "/home/ymsyaraf/projects/NanoDir/UI.cpp"
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/src/common/UI.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/UI.cpp",
+  "file": "/home/ymsyaraf/projects/NanoDir/src/common/UI.cpp"
 },
 {
   "directory": "/home/ymsyaraf/projects/NanoDir/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/FileOperations.cpp.o -c /home/ymsyaraf/projects/NanoDir/FileOperations.cpp",
-  "file": "/home/ymsyaraf/projects/NanoDir/FileOperations.cpp"
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp",
+  "file": "/home/ymsyaraf/projects/NanoDir/src/common/FileOperations.cpp"
 },
 {
   "directory": "/home/ymsyaraf/projects/NanoDir/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/InputHandler.cpp.o -c /home/ymsyaraf/projects/NanoDir/InputHandler.cpp",
-  "file": "/home/ymsyaraf/projects/NanoDir/InputHandler.cpp"
+  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o -c /home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp",
+  "file": "/home/ymsyaraf/projects/NanoDir/src/common/InputHandler.cpp"
 }
 ]

@@ -129,125 +129,125 @@ NanoDir/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/build
 .PHONY : NanoDir/fast
 
-FileOperations.o: FileOperations.cpp.o
-.PHONY : FileOperations.o
+src/common/FileOperations.o: src/common/FileOperations.cpp.o
+.PHONY : src/common/FileOperations.o
 
 # target to build an object file
-FileOperations.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/FileOperations.cpp.o
-.PHONY : FileOperations.cpp.o
+src/common/FileOperations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o
+.PHONY : src/common/FileOperations.cpp.o
 
-FileOperations.i: FileOperations.cpp.i
-.PHONY : FileOperations.i
+src/common/FileOperations.i: src/common/FileOperations.cpp.i
+.PHONY : src/common/FileOperations.i
 
 # target to preprocess a source file
-FileOperations.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/FileOperations.cpp.i
-.PHONY : FileOperations.cpp.i
+src/common/FileOperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.i
+.PHONY : src/common/FileOperations.cpp.i
 
-FileOperations.s: FileOperations.cpp.s
-.PHONY : FileOperations.s
+src/common/FileOperations.s: src/common/FileOperations.cpp.s
+.PHONY : src/common/FileOperations.s
 
 # target to generate assembly for a file
-FileOperations.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/FileOperations.cpp.s
-.PHONY : FileOperations.cpp.s
+src/common/FileOperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.s
+.PHONY : src/common/FileOperations.cpp.s
 
-InputHandler.o: InputHandler.cpp.o
-.PHONY : InputHandler.o
+src/common/InputHandler.o: src/common/InputHandler.cpp.o
+.PHONY : src/common/InputHandler.o
 
 # target to build an object file
-InputHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/InputHandler.cpp.o
-.PHONY : InputHandler.cpp.o
+src/common/InputHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o
+.PHONY : src/common/InputHandler.cpp.o
 
-InputHandler.i: InputHandler.cpp.i
-.PHONY : InputHandler.i
+src/common/InputHandler.i: src/common/InputHandler.cpp.i
+.PHONY : src/common/InputHandler.i
 
 # target to preprocess a source file
-InputHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/InputHandler.cpp.i
-.PHONY : InputHandler.cpp.i
+src/common/InputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.i
+.PHONY : src/common/InputHandler.cpp.i
 
-InputHandler.s: InputHandler.cpp.s
-.PHONY : InputHandler.s
+src/common/InputHandler.s: src/common/InputHandler.cpp.s
+.PHONY : src/common/InputHandler.s
 
 # target to generate assembly for a file
-InputHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/InputHandler.cpp.s
-.PHONY : InputHandler.cpp.s
+src/common/InputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.s
+.PHONY : src/common/InputHandler.cpp.s
 
-NanoDir.o: NanoDir.cpp.o
-.PHONY : NanoDir.o
+src/common/NanoDir.o: src/common/NanoDir.cpp.o
+.PHONY : src/common/NanoDir.o
 
 # target to build an object file
-NanoDir.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/NanoDir.cpp.o
-.PHONY : NanoDir.cpp.o
+src/common/NanoDir.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o
+.PHONY : src/common/NanoDir.cpp.o
 
-NanoDir.i: NanoDir.cpp.i
-.PHONY : NanoDir.i
+src/common/NanoDir.i: src/common/NanoDir.cpp.i
+.PHONY : src/common/NanoDir.i
 
 # target to preprocess a source file
-NanoDir.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/NanoDir.cpp.i
-.PHONY : NanoDir.cpp.i
+src/common/NanoDir.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.i
+.PHONY : src/common/NanoDir.cpp.i
 
-NanoDir.s: NanoDir.cpp.s
-.PHONY : NanoDir.s
+src/common/NanoDir.s: src/common/NanoDir.cpp.s
+.PHONY : src/common/NanoDir.s
 
 # target to generate assembly for a file
-NanoDir.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/NanoDir.cpp.s
-.PHONY : NanoDir.cpp.s
+src/common/NanoDir.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.s
+.PHONY : src/common/NanoDir.cpp.s
 
-UI.o: UI.cpp.o
-.PHONY : UI.o
+src/common/UI.o: src/common/UI.cpp.o
+.PHONY : src/common/UI.o
 
 # target to build an object file
-UI.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/UI.cpp.o
-.PHONY : UI.cpp.o
+src/common/UI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/UI.cpp.o
+.PHONY : src/common/UI.cpp.o
 
-UI.i: UI.cpp.i
-.PHONY : UI.i
+src/common/UI.i: src/common/UI.cpp.i
+.PHONY : src/common/UI.i
 
 # target to preprocess a source file
-UI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/UI.cpp.i
-.PHONY : UI.cpp.i
+src/common/UI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/UI.cpp.i
+.PHONY : src/common/UI.cpp.i
 
-UI.s: UI.cpp.s
-.PHONY : UI.s
+src/common/UI.s: src/common/UI.cpp.s
+.PHONY : src/common/UI.s
 
 # target to generate assembly for a file
-UI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/UI.cpp.s
-.PHONY : UI.cpp.s
+src/common/UI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/common/UI.cpp.s
+.PHONY : src/common/UI.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/linux/main.o: src/linux/main.cpp.o
+.PHONY : src/linux/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/linux/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/linux/main.cpp.o
+.PHONY : src/linux/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/linux/main.i: src/linux/main.cpp.i
+.PHONY : src/linux/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/linux/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/linux/main.cpp.i
+.PHONY : src/linux/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/linux/main.s: src/linux/main.cpp.s
+.PHONY : src/linux/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/linux/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NanoDir.dir/build.make CMakeFiles/NanoDir.dir/src/linux/main.cpp.s
+.PHONY : src/linux/main.cpp.s
 
 # Help Target
 help:
@@ -258,21 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NanoDir"
-	@echo "... FileOperations.o"
-	@echo "... FileOperations.i"
-	@echo "... FileOperations.s"
-	@echo "... InputHandler.o"
-	@echo "... InputHandler.i"
-	@echo "... InputHandler.s"
-	@echo "... NanoDir.o"
-	@echo "... NanoDir.i"
-	@echo "... NanoDir.s"
-	@echo "... UI.o"
-	@echo "... UI.i"
-	@echo "... UI.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/common/FileOperations.o"
+	@echo "... src/common/FileOperations.i"
+	@echo "... src/common/FileOperations.s"
+	@echo "... src/common/InputHandler.o"
+	@echo "... src/common/InputHandler.i"
+	@echo "... src/common/InputHandler.s"
+	@echo "... src/common/NanoDir.o"
+	@echo "... src/common/NanoDir.i"
+	@echo "... src/common/NanoDir.s"
+	@echo "... src/common/UI.o"
+	@echo "... src/common/UI.i"
+	@echo "... src/common/UI.s"
+	@echo "... src/linux/main.o"
+	@echo "... src/linux/main.i"
+	@echo "... src/linux/main.s"
 .PHONY : help
 
 
