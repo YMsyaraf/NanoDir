@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore KDevelop project files
 *.kdev4
 
@@ -6,3 +7,7 @@
 /bin/
 /out/
 /.kdev4/
+=======
+
+*.cbp
+>>>>>>> 70d131d256e3e0972745a8c1912902d3e4164aa1
