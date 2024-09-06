@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/NanoDir.dir/src/linux/main.cpp.o CMakeFiles/NanoDir.dir/src/common/NanoDir.cpp.o CMakeFiles/NanoDir.dir/src/common/UI.cpp.o CMakeFiles/NanoDir.dir/src/common/FileOperations.cpp.o CMakeFiles/NanoDir.dir/src/common/InputHandler.cpp.o -o NanoDir  -Wl,-rpath,/usr/local/lib /usr/local/lib/libtermbox.so 

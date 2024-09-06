@@ -1,14 +1,13 @@
 #include "NanoDir.h"
 
 
-
     NanoDir::NanoDir()
         : files(),
         selectedIndex(0),
         currentPath(fs::current_path()),
         commandBuffer(""),
-        backgroundColor(TB_BLUE),
-        textColor(TB_WHITE),
+        backgroundColor(TB_BLACK),
+        textColor(TB_YELLOW),
         currentMode(MODE_NAVIGATION) {
 
     if (tb_init() != 0) {

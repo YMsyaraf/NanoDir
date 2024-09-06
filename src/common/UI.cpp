@@ -31,7 +31,6 @@ void NanoDir::changeColor(ColorOption bg, ColorOption text) {
 }
 
 
-
 void NanoDir::drawBox(int x, int y, int width, int height, uint16_t fg, uint16_t bg) {
     for (int i = 0; i < width; ++i) {
         tb_change_cell(x + i, y, '-', fg, bg);
@@ -90,9 +89,6 @@ void NanoDir::drawUI() {
         tb_print(1, tb_height() - 2, TB_GREEN, backgroundColor, "Navigation Mode");
     }
 }
-
-
-
 
 
 void NanoDir::tb_print(int x, int y, uint16_t fg, uint16_t bg, const char *str) {

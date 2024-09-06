@@ -4,10 +4,10 @@ void NanoDir::executeCommand(const std::string& command) {
     std::istringstream iss(command);
     std::string cmd, dest;
     iss >> cmd >> dest;
-    if (cmd == "exit") {
+    if (command == "exit") {
         tb_shutdown();
         exit(0);
-    } else if (cmd.rfind("color ", 0) == 0) {
+    } else if (command.rfind("color ", 0) == 0) {
         std::istringstream iss(command);
         std::string cmd, bg, text;
         iss >> cmd >> bg >> text;
@@ -30,13 +30,13 @@ void NanoDir::executeCommand(const std::string& command) {
 
         changeColor(bgColor, textColor);
 
-    } else if (cmd == "delete") {
+    } else if (command == "delete") {
         for (int index : selectedFiles) {
             fs::remove(currentPath / files[index]);
         }
         selectedFiles.clear(); // Clear selection after operation
 
-    } else if (cmd == "copy") {
+    } else if (command == "copy") {
         // Set destination to current directory
         fs::path destinationPath = dest.empty() ? currentPath : fs::path(dest);
         for (int index : selectedFiles) {
@@ -93,7 +93,7 @@ void NanoDir::handleKeyPress(const tb_event &event) {
         } else {
             currentMode = MODE_NAVIGATION;
         }
-        return; // Exit early to avoid processing further
+        return;
     }
 
     if (currentMode == MODE_NAVIGATION) {

@@ -1,4 +1,4 @@
-#include "NanoDir.h"
+#include "../common/NanoDir.h"
 
 int main() {
     NanoDir app;
