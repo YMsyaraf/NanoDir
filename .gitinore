@@ -1,3 +1,8 @@
-build/
-.kdev4/
-NanoDir.kdev4
+# Ignore KDevelop project files
+*.kdev4
+
+# Ignore build directories
+/build/
+/bin/
+/out/
+/.kdev4/
