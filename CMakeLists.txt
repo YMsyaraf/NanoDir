@@ -5,6 +5,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_BUILD_TYPE Debug)
 
+# Define version macros globally
+add_definitions(-DNANODIR_VERSION_MAJOR=${PROJECT_VERSION_MAJOR})
+add_definitions(-DNANODIR_VERSION_MINOR=${PROJECT_VERSION_MINOR})
+add_definitions(-DNANODIR_VERSION_PATCH=${PROJECT_VERSION_PATCH})
+
 # Add common source files
 set(COMMON_SOURCES
     src/common/NanoDir.cpp
@@ -26,7 +31,7 @@ if (WIN32)
     add_custom_command(
         TARGET NanoDir POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy ${ICON_FILE} $<TARGET_FILE_DIR:NanoDir>
-	)
+    )
 else()
     add_executable(NanoDir src/linux/main_linux.cpp ${COMMON_SOURCES})
     find_path(TERMBOX_INCLUDE_DIR termbox.h)
