@@ -1,7 +1,7 @@
 #include "NanoDir.h"
 
 
-    NanoDir::NanoDir()
+NanoDir::NanoDir()
         : files(),
         selectedIndex(0),
         currentPath(fs::current_path()),
@@ -24,6 +24,35 @@ NanoDir::~NanoDir() {
     tb_shutdown();
 }
 
+// Enable debug mode
+void NanoDir::enableDebug() {
+    debugMode = true;
+}
+
+// Log a debug message
+void NanoDir::logDebug(const std::string& message) {
+    if (debugMode) {
+        debugLog.push_back(message);
+    }
+}
+
+// Print the debug log
+void NanoDir::saveDebugLog() {
+    if (debugMode) {
+        #ifdef _WIN32
+        std::string homeDir = getenv("USERPROFILE");
+        #else
+        std::string homeDir = getenv("HOME");
+        #endif
+        std::string filePath = homeDir + ("/nanodir_debug.log");
+        std::ofstream debugFile(filePath);
+        for (const auto& message : debugLog) {
+            debugFile << message << std::endl;
+        }
+        debugFile.close();
+    }
+}
+
 void NanoDir::run() {
     while (true) {
         tb_clear();
@@ -43,5 +72,4 @@ void NanoDir::run() {
         }
     }
 }
-
 

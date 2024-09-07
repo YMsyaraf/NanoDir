@@ -2,15 +2,25 @@
 
 void NanoDir::executeCommand(const std::string& command) {
     std::istringstream iss(command);
-    std::string cmd, dest;
-    iss >> cmd >> dest;
+    std::string cmd, newName;
+    iss >> cmd >> newName;
+
+    logDebug("Executing command: " + command);
+
     if (command == "exit") {
+        logDebug("Exiting program");
         tb_shutdown();
+        saveDebugLog();
         exit(0);
+
     } else if (command.rfind("color ", 0) == 0) {
+
+        logDebug("Changing color to bg: " + newName + ", text: " + newName);
+
         std::istringstream iss(command);
         std::string cmd, bg, text;
         iss >> cmd >> bg >> text;
+
         ColorOption bgColor = COLOR_BLACK;
         ColorOption textColor = COLOR_WHITE;
 
@@ -31,14 +41,40 @@ void NanoDir::executeCommand(const std::string& command) {
         changeColor(bgColor, textColor);
 
     } else if (command == "delete") {
+
+        logDebug("Deleting selected files");
+
         for (int index : selectedFiles) {
             fs::remove(currentPath / files[index]);
         }
         selectedFiles.clear(); // Clear selection after operation
 
+    }else if (command == "rename") {
+
+        logDebug("Renaming files to: " + newName);
+
+        std::istringstream iss(command);
+        std::string cmd, newName;
+        iss >> cmd >> newName;
+
+        logDebug(command+" or "+cmd+" files to: " + newName);
+
+        if (selectedFiles.size() == 1) {
+            fs::rename(currentPath / files[selectedFiles[0]], currentPath / newName);
+        } else {
+            for (size_t i = 0; i < selectedFiles.size(); ++i) {
+                std::string newFileName = newName + "(" + std::to_string(i + 1) + ")";
+                fs::rename(currentPath / files[selectedFiles[i]], currentPath / newFileName);
+            }
+        }
+        selectedFiles.clear(); // Clear selection after operation
+
     } else if (command == "copy") {
+
+        logDebug("Copying files to: " + newName);
+
         // Set destination to current directory
-        fs::path destinationPath = dest.empty() ? currentPath : fs::path(dest);
+        fs::path destinationPath = newName.empty() ? currentPath : fs::path(newName);
         for (int index : selectedFiles) {
             fs::path source = currentPath / files[index];
             fs::path destination = destinationPath / files[index];
@@ -54,6 +90,8 @@ void NanoDir::executeCommand(const std::string& command) {
         selectedFiles.clear(); // Clear selection after operation
 
     }else {
+        logDebug("Executing system command: " + command);
+
         tb_shutdown(); // Shutdown Termbox before executing the command
         chdir(currentPath.c_str()); // Change to the current directory
         int result = system(command.c_str());
@@ -90,8 +128,10 @@ void NanoDir::handleKeyPress(const tb_event &event) {
         // Switch between modes
         if (currentMode == MODE_NAVIGATION) {
             currentMode = MODE_COMMAND;
+            logDebug("Switched to COMMAND mode");
         } else {
             currentMode = MODE_NAVIGATION;
+            logDebug("Switched to NAVIGATION mode");
         }
         return;
     }
@@ -101,20 +141,24 @@ void NanoDir::handleKeyPress(const tb_event &event) {
             case TB_KEY_ARROW_UP:
                 if (selectedIndex > 0) {
                     selectedIndex--;
+                    logDebug("Moved selection up to index " + std::to_string(selectedIndex));
                 }
                 break;
             case TB_KEY_ARROW_DOWN:
                 if (selectedIndex < files.size() - 1) {
                     selectedIndex++;
+                    logDebug("Moved selection down to index " + std::to_string(selectedIndex));
                 }
                 break;
             case TB_KEY_ENTER:
                 if (files[selectedIndex] == "..") {
                     currentPath = currentPath.parent_path();
+                    logDebug("Navigated to parent directory: " + currentPath.string());
                 } else {
                     fs::path newPath = currentPath / files[selectedIndex];
                     if (fs::is_directory(newPath)) {
                         currentPath = newPath;
+                        logDebug("Navigated to directory: " + newPath.string());
                     }
                 }
                 listFiles(currentPath);
@@ -125,8 +169,11 @@ void NanoDir::handleKeyPress(const tb_event &event) {
                     auto it = std::find(selectedFiles.begin(), selectedFiles.end(), selectedIndex);
                     if (it != selectedFiles.end()) {
                         selectedFiles.erase(it); // Deselect if already selected
+                        logDebug("Deselected file at index " + std::to_string(selectedIndex));
                     } else {
                     selectedFiles.push_back(selectedIndex); // Select if not already selected
+                    logDebug("Selected file at index " + std::to_string(selectedIndex));
+
                     }
                 }
             break;
@@ -135,17 +182,22 @@ void NanoDir::handleKeyPress(const tb_event &event) {
         }
     } else if (currentMode == MODE_COMMAND) {
         if (event.key == TB_KEY_ENTER) {
+            logDebug("Executing command: " + commandBuffer);
             executeCommand(commandBuffer);
             commandBuffer.clear();
             currentMode = MODE_NAVIGATION;
+            logDebug("Switched to NAVIGATION mode");
         } else if (event.key == TB_KEY_BACKSPACE || event.key == TB_KEY_BACKSPACE2) {
             if (!commandBuffer.empty()) {
                 commandBuffer.pop_back();
+                logDebug("Removed last character from command buffer");
             }
         } else if (event.ch) {
             commandBuffer.push_back(event.ch);
+            logDebug("Added character to command buffer: " + std::string(1, event.ch));
         } else if (event.key == TB_KEY_SPACE) {
             commandBuffer.push_back(' ');
+            logDebug("Added space to command buffer");
         }
     }
 }

@@ -22,3 +22,6 @@ void NanoDir::listFiles(const std::filesystem::path& path) {
     files.insert(files.end(), directories.begin(), directories.end());
     files.insert(files.end(), regularFiles.begin(), regularFiles.end());
 }
+
+
+

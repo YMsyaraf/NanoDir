@@ -1,7 +1,3 @@
-Great! Here's an updated `README.md` that includes the details about the command modes and their functionalities:
-
----
-
 # NanoDir
 
 **NanoDir** is a terminal-based file manager designed for efficiency and simplicity. It offers cross-platform compatibility and a user-friendly interface.
@@ -80,6 +76,15 @@ nanodir [options] [directory]
 
 - `-h, --help`: Show help message
 - `-v, --version`: Show version information
+- `--debug`: enable debug mode
+
+###Debug log
+The debug log file is named `nanodir_debug.log`. 
+
+### Location:
+- **On Unix-like systems (Linux, macOS)**: It is saved in the home directory, typically `~/nanodir_debug.log`.
+- **On Windows**: It is saved in the user's profile directory, typically `C:\Users\<YourUsername>\nanodir_debug.log`.
+
 
 ## Contributing
 
@@ -102,4 +107,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Feel free to customize this further to match your project's specifics! If you need any more help, just let me know.

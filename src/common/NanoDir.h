@@ -7,6 +7,8 @@
 #include <string>
 #include <filesystem>
 #include <termbox.h>
+#include <fstream>
+#include <cstdlib> //For getenv
 
 #ifdef _WIN32
     #include <windows.h>
@@ -36,16 +38,6 @@ public:
     ~NanoDir();
     void run();
 
-private:
-    std::vector<std::string> files;
-    std::vector<int> selectedFiles;
-    int selectedIndex;
-    fs::path currentPath;
-    std::string commandBuffer;
-    uint16_t backgroundColor;
-    uint16_t textColor;
-    Mode currentMode;
-
     void listFiles(const fs::path& path);
     void drawBox(int x, int y, int width, int height, uint16_t fg, uint16_t bg);
     void drawUI();
@@ -55,6 +47,25 @@ private:
     void handleKeyPress(const tb_event &event);
     void setBackgroundColor();
     void changeColor(ColorOption bg, ColorOption text);
+    void renameFiles(const std::vector<std::string>& selectedFiles, const std::string& newName);
+    void enableDebug();
+    void logDebug(const std::string& message);
+    void saveDebugLog();
+
+private:
+    std::vector<std::string> files;
+    std::vector<int> selectedFiles;
+    int selectedIndex;
+    fs::path currentPath;
+    std::string commandBuffer;
+    uint16_t backgroundColor;
+    uint16_t textColor;
+    Mode currentMode;
+    bool debugMode = false;
+    std::vector<std::string> debugLog;
+
+
+
 
 };
 
