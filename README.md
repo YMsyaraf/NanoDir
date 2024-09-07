@@ -46,7 +46,6 @@
 
 - Ensure you have the necessary dependencies installed:
   - Termbox
-  - Any other dependencies your project requires
 
 ### Build and Install
 
@@ -96,14 +95,4 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Mention any libraries, tools, or resources you used.
-- Thank contributors or inspirations for the project.
-
----
 
