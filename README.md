@@ -78,7 +78,7 @@ nanodir [options] [directory]
 - `-v, --version`: Show version information
 - `--debug`: enable debug mode
 
-###Debug log
+### Debug log:
 The debug log file is named `nanodir_debug.log`. 
 
 ### Location:
