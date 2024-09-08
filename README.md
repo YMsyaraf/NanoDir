@@ -33,6 +33,18 @@
   - In command mode, type `delete` to delete a file.
   - In selection mode, press `space` to select multiple files, then type `delete` to delete them.
 
+### Rename Files
+
+To rename files, use the `rename` command followed by the new name. If multiple files are selected, they will be renamed with an incrementing number.
+
+- **Single File**: `rename newname`
+- **Multiple Files**: `rename newname` (Files will be renamed to `newname(1)`, `newname(2)`, etc.)
+
+Example:
+```sh
+rename newfile
+```
+
 ### Selection Mode
 
 - Press `space` to select or deselect files.
