@@ -7,14 +7,13 @@ void NanoDir::executeCommand(const std::string& command) {
 
     logDebug("Executing command: " + command);
 
-    if (command == "exit") {
+    if (cmd == "exit") {
         logDebug("Exiting program");
         tb_shutdown();
         saveDebugLog();
         exit(0);
 
-    } else if (command.rfind("color ", 0) == 0) {
-
+    } else if (cmd == "color") {
         logDebug("Changing color to bg: " + newName + ", text: " + newName);
 
         std::istringstream iss(command);
@@ -40,8 +39,7 @@ void NanoDir::executeCommand(const std::string& command) {
 
         changeColor(bgColor, textColor);
 
-    } else if (command == "delete") {
-
+    } else if (cmd == "delete") {
         logDebug("Deleting selected files");
 
         for (int index : selectedFiles) {
@@ -49,15 +47,8 @@ void NanoDir::executeCommand(const std::string& command) {
         }
         selectedFiles.clear(); // Clear selection after operation
 
-    }else if (command == "rename") {
-
+    } else if (cmd == "rename") {
         logDebug("Renaming files to: " + newName);
-
-        std::istringstream iss(command);
-        std::string cmd, newName;
-        iss >> cmd >> newName;
-
-        logDebug(command+" or "+cmd+" files to: " + newName);
 
         if (selectedFiles.size() == 1) {
             fs::rename(currentPath / files[selectedFiles[0]], currentPath / newName);
@@ -69,8 +60,7 @@ void NanoDir::executeCommand(const std::string& command) {
         }
         selectedFiles.clear(); // Clear selection after operation
 
-    } else if (command == "copy") {
-
+    } else if (cmd == "copy") {
         logDebug("Copying files to: " + newName);
 
         // Set destination to current directory
@@ -89,7 +79,7 @@ void NanoDir::executeCommand(const std::string& command) {
         }
         selectedFiles.clear(); // Clear selection after operation
 
-    }else {
+    } else {
         logDebug("Executing system command: " + command);
 
         tb_shutdown(); // Shutdown Termbox before executing the command
@@ -103,6 +93,7 @@ void NanoDir::executeCommand(const std::string& command) {
     }
     listFiles(currentPath); // Refresh the file list
 }
+
 
 
 void NanoDir::handleMouseEvent(const tb_event &event) {
