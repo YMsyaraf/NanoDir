@@ -28,6 +28,17 @@ int main(int argc, char *argv[]) {
     }
 
     NanoDir app;
+
+        // Check for debug flag
+    if (argc > 1) {
+        std::string arg = argv[1];
+        if (arg == "--debug") {
+            app.enableDebug();
+            app.logDebug("Debug mode enabled");}
+        }
     app.run();
+
+
+    app.saveDebugLog();
     return 0;
 }

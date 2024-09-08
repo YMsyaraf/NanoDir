@@ -7,6 +7,7 @@
 /build/
 /bin/
 /out/
+/obj/
 /.kdev4/
 
 # Ignore CMake generated files
@@ -19,6 +20,10 @@ Makefile
 *.depend
 *.layout.*
 *.workspace
+*.layout
+*.depend
+*.layout
+*.cbp.bak
 
 # Ignore compiled object files
 *.o
@@ -31,6 +36,8 @@ Makefile
 
 # Ignore temporary files
 *.tmp
+*.swo
+*~
 *.log
 *.bak
 *.swp

@@ -18,6 +18,7 @@ set(COMMON_SOURCES
     src/common/InputHandler.cpp
 )
 
+
 # Add platform-specific source files
 if (WIN32)
     add_executable(NanoDir src/windows/main_windows.cpp ${COMMON_SOURCES} ${SOURCE_FILES})
